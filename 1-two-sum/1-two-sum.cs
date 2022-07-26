@@ -6,10 +6,11 @@ public class Solution {
         }
         
         for(int i=0; i<nums.Length; i++)
-        {            
+        {
+            var t1 = target-nums[i];
             for(int j=i+1; j<nums.Length; j++)
             {                
-                if((nums[i]+nums[j])==target)
+                if(t1==nums[j])
                 {
                     return new [] {i, j};
                 }
