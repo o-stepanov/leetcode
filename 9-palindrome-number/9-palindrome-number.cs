@@ -10,12 +10,12 @@ public class Solution {
             return true;
         }
         
-        int revertedNumber = 0;
-        while(x > revertedNumber) {
-            revertedNumber = revertedNumber * 10 + x % 10;
+        int revertX = 0;
+        while(x > revertX) {
+            revertX = revertX * 10 + x % 10;
             x /= 10;
         }
         
-        return x == revertedNumber || x == revertedNumber/10;
+        return x == revertX || x == revertX/10;
     }
 }
