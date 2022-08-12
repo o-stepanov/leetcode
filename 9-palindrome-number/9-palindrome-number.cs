@@ -10,10 +10,12 @@ public class Solution {
             return true;
         }
         
-        var strX = x.ToString();
-        var xA1 = strX.ToArray();
-        var xA2 = xA1.Reverse().ToArray();
+        int revertedNumber = 0;
+        while(x > revertedNumber) {
+            revertedNumber = revertedNumber * 10 + x % 10;
+            x /= 10;
+        }
         
-        return xA2.SequenceEqual(xA1);
+        return x == revertedNumber || x == revertedNumber/10;
     }
 }
