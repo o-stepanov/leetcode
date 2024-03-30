@@ -2,8 +2,8 @@ using System.Threading;
 
 public class Foo 
 {
-    private AutoResetEvent mutexThrS = new AutoResetEvent(false);
-    private AutoResetEvent mutexThrT = new AutoResetEvent(false);
+    private ManualResetEvent mutexThrS = new ManualResetEvent(false);
+    private ManualResetEvent mutexThrT = new ManualResetEvent(false);
 
     public Foo() 
     {    
